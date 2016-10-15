@@ -19,8 +19,9 @@ var fetchChannel = function() {
     var link = document.querySelector('[id="watch7-user-header"] a[href^="/user/"]');
     if (link === null) {
         link = document.querySelector('[id="watch7-user-header"] a[href^="/channel/"]');
-        if (link === null)
+        if (link === null) {
             return;
+        }
     }
     var linkHref = link.getAttribute('href');
     var linkmatch = linkHref.match(/\/(user|channel)\/(.+)/);
